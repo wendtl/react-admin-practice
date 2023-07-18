@@ -1,7 +1,7 @@
 import "./topbox.scss"
 import { topDealUsers } from "../../exampleData";
 
-const Topbox=  () => {
+const Topbox = () => {
     return (
         <div className="topbox">
             <h1>Top Deals</h1>
