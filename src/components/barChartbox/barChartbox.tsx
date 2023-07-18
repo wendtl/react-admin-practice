@@ -11,12 +11,16 @@ type BarChartboxProps = {
 
 const BarChartbox = ( props: BarChartboxProps ) => {
     return (
-        <div>
+        <div className="barChartbox">
             <h1>{props.title}</h1>
-            <div>
-                <ResponsiveContainer width="99%" height="100%">
+            <div className="chart">
+                <ResponsiveContainer width="99%" height="99%">
                     <BarChart data={props.chartData}>
-                        <Tooltip labelStyle={{ display: 'none' }} contentStyle={{ backgroundColor: '#2a3447', borderRadius: '5px' }} />
+                        <Tooltip
+                            labelStyle={{ display: 'none' }}
+                            contentStyle={{ borderRadius: '5px' }}
+                            cursor={{ fill: 'none' }}
+                        />
                         <Bar dataKey={props.dataKey} fill="#8884d8" />
                     </BarChart>
                 </ResponsiveContainer>
